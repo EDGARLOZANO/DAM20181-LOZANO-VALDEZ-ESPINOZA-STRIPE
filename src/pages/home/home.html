@@ -25,4 +25,10 @@
 <button  ion-button color="primary" block >Agregar Tarjeta</button>
 </div>   
 </form>
+<ion-card *ngIf="token">
+    
+  <ion-card-content>
+    <p>token: {{ token }}</p>
+  </ion-card-content>
+</ion-card>
 </ion-content>
