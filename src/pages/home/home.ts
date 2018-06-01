@@ -49,6 +49,22 @@ export class HomePage {
         displayError.textContent = '';
       }
     });
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+
+      //this.stripe.createSource(this.card)
+      this.stripe.createToken(this.card).then(result => {
+        if (result.error) {
+          var errorElement = document.getElementById('card-errors');
+          errorElement.textContent = result.error.message;
+        } else {
+           this.token=result.token.id;
+          console.log(result);
+          this.card.clear();
+        }
+      });
+    });
 
     
   }
