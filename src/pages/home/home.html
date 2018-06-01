@@ -1,11 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     Stripe App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-card>
+    <img src="./assets/imgs/logo2.png"/>
   
+  </ion-card>
+
+<form action="/" method="post" id="payment-form">
+  <div class="form-row">
+    <div id="card-element">
+      <!-- elementos de la tarjeta. -->
+    </div>
+
+    <!-- Mensajes de error-->
+    <div id="card-errors" role="alert"></div>
+  </div>
+<div>   
+<button  ion-button color="primary" block >Agregar Tarjeta</button>
+</div>   
+</form>
 </ion-content>
